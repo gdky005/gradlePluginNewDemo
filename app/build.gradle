@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
-apply plugin: 'wq.hello'
-apply plugin: wq.gdky005.NewWQPlugin
+//apply plugin: 'wq.hello'
+//apply plugin: wq.gdky005.NewWQPlugin
+apply plugin: wq.gdky005.WQPlugin
 
 android {
     compileSdkVersion 26

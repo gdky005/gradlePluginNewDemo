@@ -15,7 +15,7 @@ def MAVEN_LOCAL_PATH = "/Users/WangQing/LocalMavenCenter/.repo"
 /* 项目的唯一的标识符，实际对应项目的名称，就是项目根目录的名称。 */
 def ARTIFACT_ID = 'WQPlugin'
 /* 本次发布的版本号, 默认可以在版本号后加上 -SNAPSHOT 表示 发布 快照版本。 */
-def VERSION_NAME = '1.0.2'
+def VERSION_NAME = '1.0.3'
 /* 项目组织唯一的标识符，实际对应JAVA的包的结构，是main目录里java的目录结构。 一般GroupID就是填 com.abc.test 这样子 */
 def GROUP_ID = 'wq.gdky005'
 
