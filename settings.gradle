@@ -1,1 +1,2 @@
 include ':app', ':gradlescriptdemo', ':buildsrc'
+//':buildsrc2',

@@ -1,0 +1,51 @@
+apply plugin: 'groovy'
+apply plugin: TestExtensionPlugin
+
+
+wq {
+    address{
+        province "BeiJing"
+        city "DongSiShiTiao"
+    }
+    myName "WangQing"
+}
+
+
+class Address{
+    String province=null
+    String city=null
+}
+class WQExtension{
+    String myName = null
+
+}
+
+class TestExtensionPlugin implements Plugin<Project> {
+
+    @Override
+    void apply(Project project) {
+
+        project.extensions.create('wq', WQExtension)
+        project.extensions.create('address', Address)
+
+
+        project.task('readExtension') << {
+            def address=project['address']
+
+            println project['wq'].myName
+            println address.province+" "+address.city
+        }
+    }
+}
+
+
+dependencies {
+    compile gradleApi()
+    compile localGroovy()
+    compile 'org.javassist:javassist:3.20.0-GA'
+    compile 'com.android.tools.build:gradle:2.3.0'
+}
+
+repositories {
+    jcenter()
+}
