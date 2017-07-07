@@ -2,7 +2,8 @@ package wq.gdky005.com
 
 import com.android.build.api.transform.*
 import com.android.build.gradle.internal.pipeline.TransformManager
-import com.android.utils.FileUtils
+import org.apache.commons.codec.digest.DigestUtils
+import org.apache.commons.io.FileUtils
 import org.gradle.api.Project
 
 class MyTransform extends Transform {
@@ -60,7 +61,7 @@ class MyTransform extends Transform {
 
                 // 重命名输出文件（同目录copyFile会冲突）
                 def jarName = jarInput.name
-                def md5Name = DigestUtils.md5Hex(jarInput.file.getAbsoluteFile())
+                def md5Name = DigestUtils.md5Hex(jarInput.file.getAbsoluteFile().toString())
                 if (jarName.endsWith(".jar")) {
                     jarName = jarName.substring(0, jarName.length() - 4)
                 }

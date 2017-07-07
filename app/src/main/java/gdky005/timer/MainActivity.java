@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 
+import gdky005.lib1.LibTest;
+
 public class MainActivity extends Activity {
 
     @Override
@@ -14,5 +16,8 @@ public class MainActivity extends Activity {
         Log.e("--->", "===================");
         new Test();
         Log.e("--->", "===================");
+
+        LibTest.show();
+
     }
 }
