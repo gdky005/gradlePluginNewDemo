@@ -9,5 +9,7 @@ class WQPlugin implements Plugin<Project> {
     void apply(Project project) {
         def android = project.extensions.findByType(AppExtension)
         android.registerTransform(new MyTransform(project))
+
+        project.gradle.addListener(new TimingsListener())
     }
 }

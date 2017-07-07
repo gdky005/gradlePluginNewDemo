@@ -1,2 +1,2 @@
-include ':app', ':gradlescriptdemo', ':buildsrc'
-//':buildsrc2',
+include ':app', ':gradlescriptdemo',':buildsrc'
+//':buildsrc2',,
